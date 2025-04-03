@@ -12,6 +12,10 @@ namespace NumberAnalyzer
 
             Console.Write("Please enter your name: ");
             string userName = Console.ReadLine().Trim(); // Initializing User's name. Trimming white space. 
+            if(userName == "")
+            {
+                userName = "spongeBob";
+            }
 
             userName = CapitalizeName(userName);
 
@@ -63,7 +67,7 @@ namespace NumberAnalyzer
                 Console.WriteLine("End Program");
             }
         }    
-        // Takes the user's name and accesses the first char of the string, capitalizes, then combining with the rest of the string.
+        // Takes the user's name and accesses the first char of the string (0), capitalizes, then re-connects with the rest of the string.
         // Forms the new and improved, properly capitalized, user's name. 
        public static string CapitalizeName(string userName)
         {
