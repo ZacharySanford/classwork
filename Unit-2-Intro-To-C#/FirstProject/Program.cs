@@ -1,4 +1,6 @@
-﻿namespace FirstProject
+﻿using System;
+
+namespace FirstProject
 {
 
     //This program will ask for three numbers
@@ -65,13 +67,15 @@
 
             Console.Write("Please enter a number: ");
             int number1 = int.Parse(Console.ReadLine());
+            Console.Write($"You entered: {number1}");
 
             Console.Write("Please enter a second number:");
             int number2 = int.Parse(Console.ReadLine());
+            Console.Write($"You entered: {number2}");
 
             Console.Write("Please enter a third number: ");
             int number3 = int.Parse(Console.ReadLine());
-            
+            Console.Write($"You entered: {number3}");
 
             int sum = number1 + number2 + number3;
            
