@@ -44,6 +44,29 @@
             {
                 Console.WriteLine("string1 equals string2");
             }
+            // Some methods process strings
+            // to see a list of all methods available to an object - just type objectName.
+            // .Length - returns the number of characters in a string. 
+            // .Contains(string) - returns true if the string given is inside the string
+            // .Substring(0,0) - extract characters from the string starting at the start index for the number of characters indicated by the length
+            //  Where you see the word index - starts counting at 0
+            //  Where you see the word position - starts counting at 1
+            // .StartsWith(string) - return true if string starts with the specifiec chars (case-sensitive)
+            // .EndsWith(string) - return true if string ends with the specific characters (case-sensitive)
+            // .Trim() - remove any leading or trailing spaces
+
+
+            string sentence = "My name is Frank and I attempt to teach C#";
+            Console.WriteLine("There are " + sentence.Length + " characters in the sentence");
+
+            bool containsFrank = sentence.Contains("Frank");
+            Console.Write("Does sentence contain Frank: " + containsFrank);
+
+            Console.WriteLine("Does sentence contain Marquise: " + sentence.Contains("Marquise"));
+
+            
+
+
         }
     }
 }

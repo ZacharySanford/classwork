@@ -15,7 +15,7 @@
 
                 if(igPay.Substring(0,1) == "a" || igPay.Substring(0,1) == "e" || igPay.Substring(0, 1) == "i" || igPay.Substring(0, 1) == "o" || igPay.Substring(0, 1) == "u")
                 {
-                    Console.WriteLine($"{igPay}way");
+                    Console.WriteLine($"The Pig Latin would be {igPay}way");
                 }else
 
 
