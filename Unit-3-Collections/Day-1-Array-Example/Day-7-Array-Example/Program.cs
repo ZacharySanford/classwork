@@ -25,11 +25,14 @@ class Program
         {
             Console.WriteLine("\nWelcome to my app!");       // Verify the app started
 
+            // const marks the variable as a constant
+            // a constant cannot be changed once it is assigned a value
+            // constant names should be all UPPERCASE with _ to separate the parts of a name
             // Define a constant to use to reference the size of the array
             const int ARRAY_SIZE = 5;  // use this every where you want to code the size of the array
 
             // Define an array to hold up to 10 numbers entered by the user
-            double[] theNumbers = new double[ARRAY_SIZE];  //define an array of 10 doubles
+            double[] theNumbers = new double[ARRAY_SIZE];  //define an array of ARRAY_SIZE doubles
 
             // Define a variable to hold the user input
             string whatUserTyped = "";
@@ -39,6 +42,11 @@ class Program
 
             // Define a variable to hold the number of variables entered by the user
             int numberEntered = 0;
+
+
+            // When you need to process an array from start to end
+            // Use a for-loop
+            // for(int i=0; i < size-of-array; i++) - use i as the index into the array inside the loop
 
             // Set up a loop to get ARRAY_SIZE numbers, one at a time or responses indicating the user is done
             for (int i = 0; i < ARRAY_SIZE; i++)
