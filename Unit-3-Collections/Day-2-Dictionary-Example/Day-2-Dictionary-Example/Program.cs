@@ -76,12 +76,52 @@ namespace Day_2_Dictionary_Example
             // use the KeyValuePair object in the foreach
             //
             // KeyValuePair<key-type, value-type> name-for-dictionary-entry
+            //
+            // KeyValuePair return the key and associated value from the dictionary
+            //
+            // .Key - access the key
+            // .Value - access the value
+            //
+            // get each key/value pair and store it in variable called anEntry
+
 
             foreach (KeyValuePair<string, int> anEntry in personInfo)
             {
                 Console.WriteLine(anEntry.Key + " lives in zip code " + anEntry.Value);
             }
-                 
+
+            //Ask the user for a name and a grade
+            // Store them in a Dictionary
+
+            // Dictionary to hold name (key) and grade (value)
+            //              key     value
+            //              type    type    name    = new Dictionary<key-type, value>();
+            Dictionary<string, double> gradebook = new Dictionary<string, double>();
+
+            //Lets add 3 students - loop 3 times for-loop
+            for (int i = 0; i < 3; i++)
+            {
+
+            //Ask the user for the student name
+            Console.Write("Enter the student name: ");
+            string studentName = Console.ReadLine();   // Get student name // Ask the user for the student name
+            Console.Write("Enter grade: ");
+            double grade = Double.Parse(Console.ReadLine()); // Get student grade
+
+            // Add data to our Dictionary
+
+            gradebook[studentName] = grade; // gradeBook.Add(studentName, grade) // may cause an exception
+
+            }
+
+            //Display the entries in our Dictionary
+            // Use a KeyValuePair type to get an entry from the Dictionary
+            foreach(KeyValuePair<string, double> anEntry in gradebook)
+            {
+                gradebook[anEntry.Key] = anEntry.Value;
+                Console.WriteLine(anEntry.Key + " has a grade of " + anEntry.Value);
+            }
+
             Console.WriteLine("Please press enter to end program...");
             Console.Read();
         }
