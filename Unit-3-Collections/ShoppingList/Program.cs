@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static Dictionary<string, decimal> menu = new Dictionary<string, decimal>();
+        
 
         static void Main(string[] args)
         {
@@ -10,8 +10,6 @@
             decimal sum = 0;
 
             Console.WriteLine("Start Program");
-
-            
 
             menu["asparagus"] = 2.99m;
             menu["popcorn"] = 4.99m;
@@ -23,6 +21,7 @@
             menu["blueberries"] = 4.99m;
 
             Console.WriteLine($"The store currently has: ");
+
             foreach (KeyValuePair<string, decimal> anItem in menu)
             {
                 Console.WriteLine($"{anItem.Key} = ${anItem.Value}.");
@@ -31,10 +30,6 @@
             
 
             List<string> cart = AddToCart();
-            foreach(string item in cart)
-            {
-                Console.WriteLine(item);
-            }
 
             foreach (string item in cart)
             {
@@ -46,6 +41,7 @@
                    
                 }
             }
+
             Console.WriteLine($"Your total today is ${sum}");
         }
     
@@ -56,7 +52,7 @@
             bool getInput = true;
             string userInput = "";
             string addToCart;
-            List<string> cart = new List<string>();
+            List<string> cart = new();
 
             
             do
@@ -99,7 +95,7 @@
             return cart;
         }
 
-
+        static Dictionary<string, decimal> menu = new();
     }
 
 }
