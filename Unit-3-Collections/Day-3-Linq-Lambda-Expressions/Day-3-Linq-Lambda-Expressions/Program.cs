@@ -69,6 +69,9 @@ internal class Program
             //              from the List that made the condition true
             //
             // Note use of var type to hold the result of .Where()
+            // .Where() will add the current entry to matchingEntries if condition is true
+            // .Where keeps an internal list of elements that match the condition
+            //  and assigns it to the variable to the left of = when done
 
             var matchingEntries =
                 starFleetPersonnel.Where(anEntry => anEntry.ToLower().Contains(searchString.ToLower()));
