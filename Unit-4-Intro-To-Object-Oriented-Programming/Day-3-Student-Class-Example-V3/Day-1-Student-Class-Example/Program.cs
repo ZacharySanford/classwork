@@ -48,6 +48,20 @@ class Program
     // Display the Student object we created
     // Console.WriteLine() does not now how to display an object of our class
     Console.WriteLine("aStudent: " + aStudent);
+    // Console.WriteLine() displays strings on the screen
+    // It expects everything you ask it to display to be a string
+    // If given a non-string value, it tries to convert it to a string
+    // The way it trys to convert to a string:
+    //
+    //  1. Looks at the datatype of what you are trying to display
+    //  2. It determines if there is a method available to convert the
+    //      data type to a string
+    //      Primitive types ( int, double, bool etc.) all have methods to convert to strings
+    //
+    //      objects must have a method defined in their class to return a string version of it's data
+    //      the method it looks for is called ToString()
+    //
+    //      if a class does not have a ToString() method C# returns Namespace.ClassName for any object of the class
     
     // Use the Student class method to display Student class object
     //
@@ -75,6 +89,18 @@ class Program
     Console.WriteLine($"\nThe sum of scores: {johnTheStudent.SumOfScores()}");
     Console.WriteLine($"\nThe avg of scores: {johnTheStudent.AvgOfScores()}");
 
-    //Console.WriteLine(aStudent.studentName);
+    // I want to see just the name of a Student
+    // Use have to a getter (if it exists) to access the data
+
+    Console.WriteLine($"aStudent object has the name {aStudent.GetStudentName()}");
+
+
+        //Console.WriteLine(aStudent.studentName);
+
+        //Change the name of aStudent
+        aStudent.SetStudentName("Pete");
+        aStudent.ShowStudent();
+
+        
     }
 }

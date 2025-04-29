@@ -84,11 +84,67 @@ public class Student
         studentName = name;   // Set the class data to the data passed in from the user
         testScores  = scores; // Set the class data to the data passed in from the user
     }
-    
+
+    /********************************************************************************************
+     * Getters and Setters to allow access to our private data
+     * 
+     * Getters and setters are special methods to allow a class controlled access to the data
+     * 
+     * Getters - return the value in our data members
+     * Setters = allow the changing of our data members
+     * 
+     * By convention: Getters are named GetVariableName
+     *                Setters are named SetVariableName
+     *                
+     * Most IDEs will generate standard Getters and Setters for any data already defined in the class
+     *******************************************************************************************/
+
+    public string GetStudentName()
+    {
+        return studentName;
+    }
+
+    public List<double> GetTestScores()
+    {
+        return testScores;
+    }
+
+    public  void SetStudentName(string newName)
+    {
+        studentName = newName;
+    }
+    public void SetTestScores(List<double> newScores)
+    {
+        testScores = newScores; 
+    }
+
     /********************************************************************************************
      * Methods to manipulate the class
      *******************************************************************************************/
-    
+
+    // We need to provide a ToString() method to return a string representation of the class data
+    // override - indicates you are providing a method that overrides standard C# behavior
+    //            the word override is optional
+    // ToString() should return a string representation of the data in the class
+    //            and accept no parameters
+    public override string ToString()
+    {
+        // Define a variable to hold the return value
+        string theData = "";
+
+        theData = $"Name: {studentName} "; // Start with the student name in a string
+        theData += "Scores: ";
+        foreach (double score in testScores) 
+        {
+            theData += score + " ";
+        }
+
+        
+
+        // Return the variable with the result
+        return theData;
+    }
+
     // We need a method to allow the user to add scores to our testScores List
     // Every method requires a method signature and a body
     // Method signature:   access  return
@@ -124,7 +180,8 @@ public class Student
     // Method compute average score for user
     public double AvgOfScores()
     {
-        return SumOfScores() / testScores.Count; // Using a class method inside another class method
+        // To round a double value to decimal places use Math.Round(value, 3-decimal-places)
+        return Math.Round(SumOfScores() / testScores.Count, 2); // Using a class method inside another class method
     }
     
     
