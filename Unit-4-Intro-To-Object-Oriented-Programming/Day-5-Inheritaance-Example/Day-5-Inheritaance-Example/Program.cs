@@ -117,82 +117,82 @@ namespace Day_3_Inheritance
 
             myFuncs.PauseProgram();
 
-            /*******************************************************************************
-             * ItalianPlayingCard Usage Examples
-             ******************************************************************************/
+            ///*******************************************************************************
+            // * ItalianPlayingCard Usage Examples
+            // ******************************************************************************/
 
-            myFuncs.WriteSeparatorLine("Instantiate and display a valid ItalianPlayingCard - 13 of Coins");
+            //myFuncs.WriteSeparatorLine("Instantiate and display a valid ItalianPlayingCard - 13 of Coins");
 
-            // Define an ItalianPlayingCard
-            ItalianPlayingCard italianCard1 = new ItalianPlayingCard(13, "Coins");
+            //// Define an ItalianPlayingCard
+            //ItalianPlayingCard italianCard1 = new ItalianPlayingCard(13, "Coins");
 
-            italianCard1.ShowCard();
+            //italianCard1.ShowCard();
 
-            myFuncs.WriteSeparatorLine("Instantiate and display an invalid ItalianPlayingCard - 8 of C#");
+            //myFuncs.WriteSeparatorLine("Instantiate and display an invalid ItalianPlayingCard - 8 of C#");
 
-            // Define an ItalianPlayingCard
-            ItalianPlayingCard italianCard2 = new ItalianPlayingCard(8, "C#");
+            //// Define an ItalianPlayingCard
+            //ItalianPlayingCard italianCard2 = new ItalianPlayingCard(8, "C#");
 
-            italianCard2.ShowCard();
+            //italianCard2.ShowCard();
 
-            myFuncs.WriteSeparatorLine("Display ItalianPlayingCard using base class ToString()");
+            //myFuncs.WriteSeparatorLine("Display ItalianPlayingCard using base class ToString()");
 
-            Console.WriteLine(italianCard1);
-            Console.WriteLine(italianCard2);
+            //Console.WriteLine(italianCard1);
+            //Console.WriteLine(italianCard2);
 
-            myFuncs.WriteSeparatorLine("Compare two ItalianPlayingCards");
+            //myFuncs.WriteSeparatorLine("Compare two ItalianPlayingCards");
 
-            Console.Write($"1st card: {italianCard1.CardValue} ({italianCard1.GetCardValueName()}) of {italianCard1.CardSuit}");
+            //Console.Write($"1st card: {italianCard1.CardValue} ({italianCard1.GetCardValueName()}) of {italianCard1.CardSuit}");
 
-            Console.Write($"{(italianCard1.Equals(italianCard2) ? " is EQUAL" : " is NOT equal")} to");
+            //Console.Write($"{(italianCard1.Equals(italianCard2) ? " is EQUAL" : " is NOT equal")} to");
 
-            Console.Write($" 2nd card: {italianCard2.CardValue} ({italianCard2.GetCardValueName()}) of {italianCard2.CardSuit}\n");
+            //Console.Write($" 2nd card: {italianCard2.CardValue} ({italianCard2.GetCardValueName()}) of {italianCard2.CardSuit}\n");
 
-            myFuncs.PauseProgram();
+            //myFuncs.PauseProgram();
 
-            /*******************************************************************************
-             * SwissPlayingCard Usage Examples
-             ******************************************************************************/
+            ///*******************************************************************************
+            // * SwissPlayingCard Usage Examples
+            // ******************************************************************************/
 
-            myFuncs.WriteSeparatorLine("Instantiate and display a valid SwissPlayingCard - 13 of Acorns");
+            //myFuncs.WriteSeparatorLine("Instantiate and display a valid SwissPlayingCard - 13 of Acorns");
            
-            // Define an SwissPlayingCard
-            SwissPlayingCard SwissCard1 = new SwissPlayingCard(13, "Acorns");
+            //// Define an SwissPlayingCard
+            //SwissPlayingCard SwissCard1 = new SwissPlayingCard(13, "Acorns");
 
-            SwissCard1.ShowCard();
+            //SwissCard1.ShowCard();
 
-            myFuncs.WriteSeparatorLine("Instantiate and display an invalid SwissPlayingCard - 2 of C#");
+            //myFuncs.WriteSeparatorLine("Instantiate and display an invalid SwissPlayingCard - 2 of C#");
 
-            // Define an SwissPlayingCard
-            SwissPlayingCard SwissCard2 = new SwissPlayingCard(2, "C#");
+            //// Define an SwissPlayingCard
+            //SwissPlayingCard SwissCard2 = new SwissPlayingCard(2, "C#");
 
-            SwissCard2.ShowCard();
+            //SwissCard2.ShowCard();
 
-            myFuncs.WriteSeparatorLine("Display SwissPlayingCard using base class ToString()");
+            //myFuncs.WriteSeparatorLine("Display SwissPlayingCard using base class ToString()");
 
-            Console.WriteLine(SwissCard1);
-            Console.WriteLine(SwissCard2);
+            //Console.WriteLine(SwissCard1);
+            //Console.WriteLine(SwissCard2);
 
-            myFuncs.WriteSeparatorLine("Compare two SwissPlayingCards");
+            //myFuncs.WriteSeparatorLine("Compare two SwissPlayingCards");
 
-            Console.Write($"1st card: {SwissCard1.CardValue} ({SwissCard1.GetCardValueName()}) of {SwissCard1.CardSuit}");
+            //Console.Write($"1st card: {SwissCard1.CardValue} ({SwissCard1.GetCardValueName()}) of {SwissCard1.CardSuit}");
 
-            Console.Write($"{(SwissCard1.Equals(SwissCard2) ? " is EQUAL" : " is NOT equal")} to");
+            //Console.Write($"{(SwissCard1.Equals(SwissCard2) ? " is EQUAL" : " is NOT equal")} to");
 
-            Console.Write($" 2nd card: {SwissCard2.CardValue} ({SwissCard2.GetCardValueName()}) of {SwissCard2.CardSuit}\n");
+            //Console.Write($" 2nd card: {SwissCard2.CardValue} ({SwissCard2.GetCardValueName()}) of {SwissCard2.CardSuit}\n");
 
-            myFuncs.WriteSeparatorLine("Instantiate and display default cards of all sub classes");
+            //myFuncs.WriteSeparatorLine("Instantiate and display default cards of all sub classes");
 
-            AmericanPlayingCard defaultUsaCard    = new AmericanPlayingCard();
-            ItalianPlayingCard defaultItalianCard = new ItalianPlayingCard();
-            SwissPlayingCard defaultSwissCard     = new SwissPlayingCard();
+            //AmericanPlayingCard defaultUsaCard    = new AmericanPlayingCard();
+            //ItalianPlayingCard defaultItalianCard = new ItalianPlayingCard();
+            //SwissPlayingCard defaultSwissCard     = new SwissPlayingCard();
 
-            defaultSwissCard.ShowCard();
-            defaultUsaCard.ShowCard();
-            defaultItalianCard.ShowCard();
+            //defaultSwissCard.ShowCard();
+            //defaultUsaCard.ShowCard();
+            //defaultItalianCard.ShowCard();
 
-            myFuncs.WriteSeparatorLine("Thanks for trying out our first OOP application!");
-            myFuncs.PauseProgram();
+            //myFuncs.WriteSeparatorLine("Thanks for trying out our first OOP application!");
+            //myFuncs.PauseProgram();
         }
     }
 }
