@@ -115,7 +115,7 @@ namespace Day_5_Inheritance_Example
             Console.Write($" 2nd card: {usaCard2.CardValue} ({usaCard2.GetCardValueName()}) of {usaCard2.CardSuit}\n");
 
             myFuncs.PauseProgram();
-<<<<<<< HEAD:Unit-4-Intro-To-Object-Oriented-Programming/Day-5-Inheritaance-Example/Day-5-Inheritaance-Example/Program.cs
+
 
             ///*******************************************************************************
             // * ItalianPlayingCard Usage Examples
@@ -193,11 +193,11 @@ namespace Day_5_Inheritance_Example
 
             //myFuncs.WriteSeparatorLine("Thanks for trying out our first OOP application!");
             //myFuncs.PauseProgram();
-=======
+
             
             myFuncs.WriteSeparatorLine("Thanks for trying out our first OOP application!");
             myFuncs.PauseProgram();
->>>>>>> 2645ef0776f2bfbc620f64cdf6b9863973650ab7:Unit-4-Intro-To-Object-Oriented-Programming/Day-5-Inheritance-Example-V1/Day-5-Inheritance-Example/Program.cs
+
         }
     }
 }
