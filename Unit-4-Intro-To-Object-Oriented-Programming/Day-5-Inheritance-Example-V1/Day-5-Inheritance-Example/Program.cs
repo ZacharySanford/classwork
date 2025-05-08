@@ -68,6 +68,11 @@ namespace Day_5_Inheritance_Example
             //      (or the generic Object ToString() if base class doesn't have one)
 
             Console.WriteLine($"theCard: {theCard}");
+            /******************************************************************************************************************
+            * Inheritance related code starts here
+            ***********************************************************************************************************/
+
+            myFuncs.WriteSeparatorLine("Inheritance stuff starts here...");
 
             AmericanPlayingCard theCard2 = new AmericanPlayingCard(10, "Spades");
 
@@ -103,16 +108,35 @@ namespace Day_5_Inheritance_Example
 
             myFuncs.WriteSeparatorLine("Display AmericanPlayingCard using base class ToString()");
 
-            Console.WriteLine(usaCard1);
+            Console.WriteLine(usaCard1); //WriteLine will look for a ToString() method to get a string
+                                         // representation of the class
+                                         // usaCard is an AmericanPlayingCard object
+                                         // The AmericanPlayingCard class DOES NOT have a ToString() method
+                                         // So it looks to the super class of AmericanPlayingCard to see if it has one
+                                         // PlayingCard DOES have a ToString() method, so WriteLine uses it
             Console.WriteLine(usaCard2);
 
             myFuncs.WriteSeparatorLine("Compare two AmericanPlayingCards");
 
             Console.Write($"1st card: {usaCard1.CardValue} ({usaCard1.GetCardValueName()}) of {usaCard1.CardSuit}");
             
+            // The super class .Equals() method is used because our sub class doesn't have one
+            //                  (condition)     ?   value-if-true : value-if-false
             Console.Write($"{(usaCard1.Equals(usaCard2) ? " is EQUAL" : " is NOT equal")} to");
 
             Console.Write($" 2nd card: {usaCard2.CardValue} ({usaCard2.GetCardValueName()}) of {usaCard2.CardSuit}\n");
+
+            myFuncs.WriteSeparatorLine("Italian Card Stuff Follows");
+
+            // Define a 2 of Coins which is Yellow
+            ItalianPlayingCard anItalianCard = new ItalianPlayingCard(2, "Coins", "Yellow");
+
+            // Define a 10 of Swords which is Red
+            ItalianPlayingCard anItalianCard2 = new ItalianPlayingCard(10, "Swords", "Red");
+
+            Console.WriteLine($"ItalianCard2: {anItalianCard2}");
+            Console.WriteLine($"ItalianCard: {anItalianCard}");
+
 
             myFuncs.PauseProgram();
 

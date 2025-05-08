@@ -121,6 +121,8 @@ namespace Day_5_Inheritance_Example
          **************************************************************************************/
 
         // Override the default ToString() method
+
+        //Default ToString() 
         // We MUST be sure the method signature matches the method we are overriding
         // An override is substituting your processing for the default processing
 
