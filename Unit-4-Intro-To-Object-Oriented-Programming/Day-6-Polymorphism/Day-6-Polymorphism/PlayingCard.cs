@@ -28,6 +28,9 @@ namespace Day_6_Polymorphism
         //
         // Adding protected to the setter allows only subclasses 
         //        of this class to change the value in teh variable
+        //
+        //  public means anyone with an object of the class can change that data
+        // protected limits the ability to change data to subclasses (keeping access in the inheritance family)
         //---------------------------------------------------------------
         public int    CardValue { get; protected set; } // Use default getter and setter
         public string CardSuit  { get; protected set; } // Use default getter and setter
@@ -143,9 +146,14 @@ namespace Day_6_Polymorphism
             return _cardValue * 17 + _cardColor.GetHashCode() + _cardSuit.GetHashCode();
         }
 
+        // the virtual keyword identifies this as a Polymorphic method in the base class
+        // subclasses may override this method to implement Polymorphism for their class
+        // Reminder: this represents the object used to run the method (to the left of the .method()
+        //           .WriteLine wants a string so it will automatically call the ToString() for this class
+        //                      to get the string representation of an object of the class
         public virtual void ShowCard()
         {
-            Console.WriteLine(this);
+            Console.WriteLine(this); // Display the string representation of an object of this class
         }
     }  // End of PlayingCard class
 } // End of namespace

@@ -131,6 +131,8 @@ namespace Day_6_Polymorphism
 
             myFuncs.WriteSeparatorLine("Create a collection of various PlayingCard types and process them");
 
+
+            // Define a List of super class objects (PlayingCard)
             List<PlayingCard> someCards = new List<PlayingCard>();
 
             someCards.Add(blackJackCard1);
@@ -152,6 +154,9 @@ namespace Day_6_Polymorphism
 
         }  // End of Main()
 
+        // Method is receiving objects of the superclass type
+        // We are sending objects of the subclass to the method
+        // We are using Polymorphism in the method: define superclass object and assign a subclass object
         static void DisplayIfCardsAreEqual(PlayingCard card1, PlayingCard card2)
         {
             myFuncs.WriteSeparatorLine("------ DisplayIfCardsAreEqual(PlayingCard card1, PlayingCard card2) method");
