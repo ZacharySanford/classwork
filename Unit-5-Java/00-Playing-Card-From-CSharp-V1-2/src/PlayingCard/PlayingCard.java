@@ -1,4 +1,4 @@
-﻿// namespace Playing_Card_Poker_Game;  // C# groups things in namespaces
+// namespace Playing_Card_Poker_Game;  // C# groups things in namespaces
 package PlayingCard; // Java groups things in package - package name must match the folder name for the package
 
 public class PlayingCard
@@ -145,12 +145,12 @@ public class PlayingCard
      ***************************************************************************************************/
 
     // Return the integer value assigned to the card - value is an enum called CardValue
-    public int GetIntValue()
+    public int getIntValue()
     {   // Return integer value of CardValue enum in a PlayingCard 
         return (int) value;  // cast the enum to an int to get its integer value
     }
 
-    public CardValue SetValue(int ivalue)
+    public CardValue setValue(int ivalue)
     {  // Set the CardValue based on an int value
         /***********************************************************************************************************
          * switch is alternative to a a set of nested if-then-else-if statements
@@ -239,8 +239,7 @@ public class PlayingCard
      * 
      ***************************************************************************************************/
     // Ask compiler to assure this is a valid super class override
-    public override string ToString()
-    { // Return a String representation of the object
+    public override string toString() { // Return a String representation of the object
         return $"Playing Card: Value={_value}({(int)_value})\tSuit={_suit}\tColor={_color}\tFace Up={_faceUp}";
     }
 
