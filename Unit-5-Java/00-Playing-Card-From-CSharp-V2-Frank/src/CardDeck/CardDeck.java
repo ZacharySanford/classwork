@@ -197,5 +197,6 @@ public class CardDeck
 		deckOfCards.removeAll(jokerCards); // C#: RemoveAll(card => card.Value == PlayingCard.CardValue.Joker && card.Suit == PlayingCard.CardSuit.Joker);
 
 		return numCardsBefore - deckOfCards.size();                    // Return # of Jokers removed
+
 	}
 }
