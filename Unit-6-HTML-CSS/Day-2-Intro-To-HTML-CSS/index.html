@@ -23,6 +23,10 @@
         <title>Frank's Page</title> <!-- what is displayed on the browser tab for the page-->
     
         <!-- Connect this html to the CSS file that has it's styling  -->
+        <!-- The <link> connects the html to an external file ( a file outside of the html file) -->
+        <!-- rel="" indicates the type of file you are connecting to -->
+        <!-- href="" the URL for the external file --> 
+         <!-- a file URL is relative to the project folder -->
          <link rel="stylesheet" href="myStyles.css"/>
 
     </head>
@@ -35,19 +39,68 @@
             
         </header>
         <nav> <!-- the nav> section contains navigation links for the page   -->
-            <!-- No nav stuff yet -->
+            <!-- The <a> (anchor tag) is where you specify links to external/other places -->
+            <!-- href="URL-to-go-to-when-clicked"-->
+            <a href="contactInfo.html">Enter Contact Info</a>
         </nav>
         <main> <!-- convey the main content of pages-->
             <div> <!-- allows organization of information on the page - optional -->
                   <!-- AND creates a stylable unit within the page     -->
                 <!-- <p> - Paragraph tag - puts content on a separate line - instead wrapping the text    -->
                 <p>This is a web page created for class</p>
-                <p>It's not much</p> 
-                <p>but it's a start!</p>
+                <p id="p2">It's not much</p> 
+                <p class="normal">but it's a start!</p>
             </div>
         </main>
         <section> <!-- optional major topic area of the main content / another stylable unit -->
-            <p>This is a paragraph in a section</p>
+            <div id="Youssef">
+                <p class="normal">This is a paragraph in a section</p>
+            </div>
+        </section>
+        <section>
+            <p>Some of the people in my class:</p>
+            <ol id="studentList">
+                <li>Kevin</li>
+                <li>Missy</li>
+                <li>Amber</li>
+                <li>Preshous</li>
+                <li>Kiana</li>
+
+            </ol>
+
+            <!-- Have the browser create a table of our data-->
+             <table>
+                <!-- One <tr> element for each row in the table-->
+                <!-- One <td> or <th> for each column in the table--> 
+                <!-- <td> is used for column content --> 
+                <!-- <th> is used for column header -->   
+                    
+                <tr> <!-- Column Heading-->
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                    <th>Heading 4</th>
+
+                </tr>    
+                <tr> <!-- Defines a row in the table -->
+                    <td>Cell 1</td> <!-- a column of data in the table -->
+                    <td>Cell 2</td> <!-- a column of data in the table -->
+                    <td>Cell 3</td> <!-- a column of data in the table -->
+                    <td>Cell 4</td> <!-- a column of data in the table -->
+                </tr>    
+                <tr> <!-- Defines a row in the table -->
+                    <td>Cell 5</td> <!-- a column of data in the table -->
+                    <td>Cell 6</td> <!-- a column of data in the table -->
+                    <td>Cell 7</td> <!-- a column of data in the table -->
+                    <td>Cell 8</td> <!-- a column of data in the table -->
+                </tr>    
+                <tr> <!-- Defines a row in the table -->
+                    <td>Cell 9</td> <!-- a column of data in the table -->
+                    <td>Cell 10</td> <!-- a column of data in the table -->
+                    <td>Cell 11</td> <!-- a column of data in the table -->
+                    <td>Cell 12</td> <!-- a column of data in the table -->
+                </tr>   
+             </table>
         </section>
         <footer> <!-- Stuff you want on the bottom of the page -->
             Copyright 2025 - Bootcamps R Us, LLC
