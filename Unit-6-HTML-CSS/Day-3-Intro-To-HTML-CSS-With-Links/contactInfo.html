@@ -11,7 +11,11 @@
     <header>
         <h1>Contact Information Form</h1>
         <h3>Please enter your information and click submit</h3>
+        <link rel="stylesheet" href="contactInfo .css"/>
     </header>
+    <nav>
+        <a href="index.html">Return Home</a>
+    </nav>
     <main> <!-- contains the primary content of the page                    -->
            <!-- We use and HTML form to interact with a used                -->
            <!-- The form can send the data to an API or JavaScript program  --> 
@@ -38,9 +42,29 @@
             <!-- the <label> tag provides information/prompt to the user on what to enter-->
             <!-- <label> has one attribute:  for="id-of-the-associated-input-control"    -->   
             <div> <!-- Ask for for the person's name -->     
-                <label for="nameField">Enter your full name: </label>
+                <label for="nameField">Enter your full name:</label>
                 <input type="text" id="nameField" name="personsName"/>
             </div>    
+             <div> <!-- Ask for for the person's name -->     
+                <label for="cityField">What city do you live in?</label>
+                <input type="text" id="cityField" name="currentCity"/>
+            </div>   
+             <div> <!-- Ask for for the person's name -->     
+                <label for="favNumField">What is your favorite number?</label>
+                <input type="number" id="favNumField" name="favoriteNumber"/>
+            </div>  
+            <div> <!-- Ask for for the person's name -->     
+                <label for="favColorField">What is your favorite number?</label>
+                <input type="color" id="favColorField" name="favoriteColor"/>
+            </div>  
+            <div> <!-- Ask for for the person's name -->     
+                <label for="birthDateField">What is your favorite number?</label>
+                <input type="date" id="birthDateField" name="birthDate"/>
+            </div> 
+            
+            <!-- Define a submit button for the form-->
+             <!-- We need the submit button to send the form to the API-->
+            <input type="submit"/>
            </form>
 
     </main>

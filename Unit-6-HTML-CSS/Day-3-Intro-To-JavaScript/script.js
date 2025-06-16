@@ -4,14 +4,28 @@
 
 // Single line comment
 
+
+
 /**
  * Functions start with the word function.
  * They don't have a return type and the naming convention is camel-case.
  */
 function variables() {
   // Declares a variable where the value cannot be changed
-  // Declares a variable those value can be changed
+  const A_VARIABLE = 42;
+  // JavaScript supports interpolation to construct strings similar to C#
+  console.log(`The value of this variable is ${A_VARIABLE}`)
+  // Declares a variable whose value can be changed
+  let itBe = 87.4
+  console.log(`The value of itBe is ${itBe}`)
+
+  itBe = 1776
+  console.log(`The value of itBe is ${itBe}`)
   // Declares a variable that will always be an array
+  let heyJude = [21, 12, 51, 27, 69]
+  console.log(`The value of heyJude is ${heyJude}`)
+  console.log(heyJude)
+  console.table(heyJude)
 }
 
 /**
