@@ -1,0 +1,55 @@
+.savate-myHome {
+  font-family: "Savate", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+footer{
+    position : absolute;
+    bottom : 10px;
+    font-size: 12px;
+    color: rgba(255, 81, 0, 0.925)
+}
+
+h1{
+    font-size: 30px;
+    color:purple;
+    font-style: bold;
+    font-weight: 500;
+}
+
+body{
+    /* background: linear-gradient(180deg, blue 0%, orange 20%); */
+    background: linear-gradient(to bottom, rgba(255, 81, 0, 0.925), rgb(11, 130, 177));
+    background-attachment: fixed;
+    margin-left:20px
+     
+}
+
+html{
+    font-family: 'savate', sans-serif;
+    font-style: bold;
+    font-weight: 400;
+}
+
+h2{
+    display: inline;
+    padding-right:20px;
+}
+
+subheader{
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: purple;
+    height:100px;
+    width:200px;
+    position: relative;
+    bottom: -200px;
+    left: 200px;
+    text-align:center;
+    
+}
+
