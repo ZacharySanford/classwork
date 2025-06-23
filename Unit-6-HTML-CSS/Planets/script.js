@@ -86,7 +86,9 @@ function incrementCount(){
     }
     document.getElementById('index').textContent = index;
 }
-
+function updateDiameter(){
+    let newDiameter = planets[index].diameter/100
+}
 function updatePlanetDisplay(){
     document.getElementById('planetName').textContent = planets[index].name;
     if(planets[index].inner){
@@ -94,8 +96,15 @@ function updatePlanetDisplay(){
     } else {
         document.getElementById('planetType').textContent = "Outer Planet";
     }
-    document.getElementById('planetSize').style.width = planets[index].diameter / 100;
-    document.getElementById('planetSize').style.height = planets[index].diameter / 100;
+    const planetImage = document.getElementById('planetSize');
+    planetImage.style.backgroundColor = planets[index].color;
+
+    const planetResize = planets[index].diameter / 100;
+    planetImage.style.width = planetResize +"px";
+    planetImage.style.height = planetResize + "px";
+}
+window.onload = function(){
+    updatePlanetDisplay();
 }
 
 

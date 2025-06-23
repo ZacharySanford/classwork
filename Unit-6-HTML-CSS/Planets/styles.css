@@ -1,8 +1,7 @@
 #planetSize{
     border-radius : 50%;
     transition : all 200ms;
-    height: 0px;
-    width: 0px;
+   
 }
 
 button{
