@@ -1,10 +1,24 @@
 <nav class="navbar">
     <div id="navlinks">
         <!-- the a html tag - anchor - specifies a link                 -->
-        <!-- here we are specifing the URL path for the link            -->
+        <!-- here we are specifying the URL path for the link            -->
         <!-- when a link is clicked the path in the href= will be added -->
-        <!--      to the server-name:port in the URL                    -->   
-        <a href="/home">Home</a>        
+        <!--      to the server-name:port in the URL                    -->
+
+        <!-- Angular uses the router to determine which component should be rendered for the URL path in the link-->
+        <!-- A <router-outlet> tag must be included in the component that has the link-->
+        <!-- in this application-->
+        <!-- Usually that is the component that included the nav-bar -->
+
+        <!-- The URL path must be associated with an Angular component -->
+        <!-- in the app.config.ts file so the router knows where to go-->
+        <a href="/home">Home</a>
+        &nbsp;
+        <a href="/sampleform">Contact Info</a>
+        &nbsp;
+        <a href="/stateseals">State Seals</a>
+        &nbsp;
+        <a href="/studentlist">Student List</a>
     </div>
 </nav>
-   
+
