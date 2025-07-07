@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 export class StudentListComponent {
 // This will hold the data for the Student to be displayed
 // the data will come from a call to a service
-// it starts out as an empty array  
+// it starts out as an empty array
 //     var-name   : data-type
 public studentList : StudentInfo [] ; // This is an array of StudentInfo objects
 
@@ -31,7 +31,7 @@ public studentList : StudentInfo [] ; // This is an array of StudentInfo objects
 //
 // Dependency Injection decouples the service from the code
 // (makes it much easier to change the service)
-//   
+//
 // without Dependency Injection the code would look like this:
 //
 //     private studentService;   // define a variable to hold the service
@@ -42,7 +42,7 @@ public studentList : StudentInfo [] ; // This is an array of StudentInfo objects
 //
 // Since the StudentService is Dependency Injectable we don't have to instantiate it
 // Angular will automatically instantiate a copy for use and pass it to the constructor
-//         when you code an object of the service type as a parameter                              
+//         when you code an object of the service type as a parameter
 constructor(private studentService  : StudentService ) {
 
   // Call the service method to send back the current list of Student from the data source
