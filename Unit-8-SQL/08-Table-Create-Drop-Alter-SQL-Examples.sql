@@ -65,3 +65,43 @@
 --
 ---------------------------------------------------------------------------------------------------------------
 
+-- Create the Pet_Types table
+-- (Parent Table to pet - Parents must be created before dependents)
+
+DROP TABLE IF EXISTS pet;
+DROP TABLE IF EXISTS pet_types;
+DROP TABLE IF EXISTS owner;
+
+CREATE TABLE pet_types
+(
+-- 	column-name	data-type nullness, 
+	pet_type_id serial 		not null, -- serial tells postgres to automatically generate a unique integers
+	name		char(15)	not null,
+	species		varchar(50)	not null,
+	CONSTRAINT 	pk_pet_type_id PRIMARY KEY (pet_type_id)
+);
+
+-- Create the owner table
+-- (Parent Table to owner - Parents must be created before dependents)
+
+Create TABLE owner
+(
+	owner_id		serial		not null, 
+	las_name		varchar(50)	not null, 
+	first_name 		varchar(50) not null, 
+	address			varchar(50), 
+	city			varchar(50)	not null,
+	state			varchar(2)	not null,
+	CONSTRAINT pk_owner_id PRIMARY KEY (owner_id)
+);
+
+CREATE TABLE pet
+(
+	pet_id			serial		not null, 
+	name			varchar(50)	not null,
+	pet_type_id		integer		not null, 
+	owner_id		integer		not null,
+	CONSTRAINT pk_pet_id PRIMARY KEY (pet_id),
+	CONSTRAINT fk_pet_type_id FOREIGN KEY (pet_type_id) REFERENCES pet_types(pet_type_id),
+	CONSTRAINT fk_owner_id FOREIGN KEY (owner_id) REFERENCES owner(owner_id)
+);
