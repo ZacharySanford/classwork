@@ -4,6 +4,8 @@ import com.gamblerapi.model.Gambler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 
 public class GamblerMemoryDao {
     /***********************************************************************
@@ -35,5 +37,27 @@ public class GamblerMemoryDao {
         return gamblers;
     }
 
+    // Method to return a gambler by ID
+    // The first thing you need is a method signature for the method
+    // A method signature: access return-type method-name(parameters)
+    public Gambler getGamblerById(int Id){
+        for(Gambler aGambler : gamblers){
+            if(aGambler.getId() == Id) {
+                return aGambler;
+            }
+        }
+        // Return null if no gambler with the given ID is found
+        return null;
+    }
+
+    public Gambler getGamblerByName(String name){
+        for(Gambler aGambler : gamblers){
+            if(aGambler.getName().equalsIgnoreCase(name)) {
+                return aGambler;
+            }
+        }
+        // Return null if no gambler with the given ID is found
+        return null;
+    }
 
 }
