@@ -16,7 +16,7 @@ public class GamblerControllerRelational {
     GamblerServiceImplementation gamblerService;
 
     public GamblerControllerRelational(GamblerServiceImplementation gamblerService) {
-        logRequest("Ganbler Service Connected");
+        logRequest("Gambler Service Connected");
         this.gamblerService = gamblerService;
     }
 
